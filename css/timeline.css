@@ -1,0 +1,140 @@
+/* ============================================================
+   TIMELINE — Vertical experience / education timeline component
+   ============================================================ */
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Vertical track line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--color-border);
+}
+
+/* ── Item ────────────────────────────────────────────────── */
+.timeline__item {
+  position: relative;
+  padding-left: var(--sp-28);
+  padding-bottom: var(--sp-40);
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+/* Gold dot on track */
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px rgba(200, 169, 119, 0.4);
+}
+
+/* ── Period ──────────────────────────────────────────────── */
+.timeline__period {
+  font-family: var(--font-sans);
+  font-size: var(--fs-11);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  color: var(--color-accent);
+  margin-bottom: var(--sp-6);
+}
+
+/* ── Role ────────────────────────────────────────────────── */
+.timeline__role {
+  font-family: var(--font-serif);
+  font-size: var(--fs-22);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  letter-spacing: var(--ls-snug);
+  line-height: var(--lh-snug);
+}
+
+/* ── Organization ────────────────────────────────────────── */
+.timeline__org {
+  font-family: var(--font-sans);
+  font-size: var(--fs-13);
+  color: var(--color-text-secondary);
+  margin-top: var(--sp-4);
+}
+
+/* ── Bullets ─────────────────────────────────────────────── */
+.timeline__bullets {
+  margin-top: var(--sp-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.timeline__bullet {
+  font-family: var(--font-sans);
+  font-size: var(--fs-13);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  padding-left: var(--sp-16);
+  position: relative;
+}
+
+.timeline__bullet::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
+  font-size: var(--fs-16);
+  line-height: 1.5;
+}
+
+/* ── Notes / Metadata ────────────────────────────────────── */
+.timeline__notes {
+  margin-top: var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.timeline__note {
+  font-family: var(--font-sans);
+  font-size: var(--fs-13);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+/* ── Hover state on timeline item ────────────────────────── */
+.timeline__item {
+  transition: opacity var(--dur-normal) var(--ease-out-quad);
+}
+
+.timeline:hover .timeline__item {
+  opacity: 0.5;
+}
+
+.timeline:hover .timeline__item:hover {
+  opacity: 1;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .timeline__item {
+    padding-left: var(--sp-24);
+    padding-bottom: var(--sp-32);
+  }
+
+  .timeline__role {
+    font-size: var(--fs-20);
+  }
+}

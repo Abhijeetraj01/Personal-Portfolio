@@ -1,0 +1,139 @@
+/* ============================================================
+   DESIGN TOKENS — Abhijeet Raj Portfolio
+   Single source of truth for all visual decisions.
+   ============================================================ */
+
+:root {
+  /* ── Colors ─────────────────────────────────────────────── */
+  --color-bg:              #0F1115;
+  --color-surface:         #171A21;
+  --color-surface-2:       #1E222C;
+  --color-surface-3:       #252A35;
+
+  --color-text-primary:    #F5F2EA;
+  --color-text-secondary:  #B5B0A4;
+  --color-text-muted:      rgba(245, 242, 234, 0.35);
+
+  --color-accent:          #C8A977;
+  --color-accent-dim:      rgba(200, 169, 119, 0.5);
+  --color-accent-ghost:    rgba(200, 169, 119, 0.12);
+  --color-accent-border:   rgba(200, 169, 119, 0.35);
+
+  --color-border:          rgba(255, 255, 255, 0.07);
+  --color-border-hover:    rgba(255, 255, 255, 0.14);
+  --color-border-accent:   rgba(200, 169, 119, 0.28);
+
+  --color-overlay:         rgba(15, 17, 21, 0.92);
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --font-serif:            'EB Garamond', Georgia, serif;
+  --font-sans:             'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Scale — Major Third (1.25) */
+  --fs-10:   0.625rem;   /* 10px  — micro labels */
+  --fs-11:   0.6875rem;  /* 11px  — overlines, captions */
+  --fs-12:   0.75rem;    /* 12px  — button text, small labels */
+  --fs-13:   0.8125rem;  /* 13px  — secondary body */
+  --fs-14:   0.875rem;   /* 14px  — body small */
+  --fs-15:   0.9375rem;  /* 15px  — philosophy, descriptions */
+  --fs-16:   1rem;       /* 16px  — body main */
+  --fs-17:   1.0625rem;  /* 17px  — body large */
+  --fs-20:   1.25rem;    /* 20px  — card titles */
+  --fs-22:   1.375rem;   /* 22px  — timeline roles */
+  --fs-24:   1.5rem;     /* 24px  — footer monogram */
+  --fs-28:   1.75rem;    /* 28px  — email CTA */
+  --fs-34:   2.125rem;   /* 34px  — featured card title */
+  --fs-44:   2.75rem;    /* 44px  — about heading */
+  --fs-48:   3rem;       /* 48px  — section closing */
+  --fs-52:   3.25rem;    /* 52px  — resume heading */
+  --fs-56:   3.5rem;     /* 56px  — section heading */
+  --fs-72:   4.5rem;     /* 72px  — hero headline lg */
+  --fs-80:   5rem;       /* 80px  — hero headline xl */
+
+  /* Line heights */
+  --lh-tight:   1.05;
+  --lh-snug:    1.15;
+  --lh-normal:  1.3;
+  --lh-relaxed: 1.65;
+  --lh-loose:   1.75;
+
+  /* Letter spacing */
+  --ls-tighter: -0.03em;
+  --ls-tight:   -0.02em;
+  --ls-snug:    -0.015em;
+  --ls-normal:   0em;
+  --ls-wide:     0.06em;
+  --ls-wider:    0.1em;
+  --ls-widest:   0.15em;
+
+  /* ── Spacing ─────────────────────────────────────────────── */
+  --sp-2:     0.125rem;   /* 2px  */
+  --sp-4:     0.25rem;    /* 4px  */
+  --sp-6:     0.375rem;   /* 6px  */
+  --sp-8:     0.5rem;     /* 8px  */
+  --sp-10:    0.625rem;   /* 10px */
+  --sp-12:    0.75rem;    /* 12px */
+  --sp-16:    1rem;       /* 16px */
+  --sp-20:    1.25rem;    /* 20px */
+  --sp-24:    1.5rem;     /* 24px */
+  --sp-28:    1.75rem;    /* 28px */
+  --sp-32:    2rem;       /* 32px */
+  --sp-40:    2.5rem;     /* 40px */
+  --sp-48:    3rem;       /* 48px */
+  --sp-56:    3.5rem;     /* 56px */
+  --sp-64:    4rem;       /* 64px */
+  --sp-80:    5rem;       /* 80px */
+  --sp-96:    6rem;       /* 96px */
+  --sp-120:   7.5rem;     /* 120px */
+  --sp-160:   10rem;      /* 160px */
+
+  /* ── Layout ─────────────────────────────────────────────── */
+  --max-width:         1280px;
+  --nav-height:        68px;
+  --margin-desktop:    var(--sp-80);
+  --margin-tablet:     var(--sp-40);
+  --margin-mobile:     var(--sp-20);
+  --col-gap:           var(--sp-24);
+  --section-gap:       var(--sp-64);
+  --card-gap:          var(--sp-28);
+
+  /* ── Shape ───────────────────────────────────────────────── */
+  --radius-sm:    2px;
+  --radius-md:    4px;
+  --radius-lg:    8px;
+  --radius-pill:  100px;
+
+  /* ── Shadows ─────────────────────────────────────────────── */
+  --shadow-card:        0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover:  0 24px 56px rgba(0, 0, 0, 0.5);
+  --shadow-glow:        0 0 24px rgba(200, 169, 119, 0.08);
+
+  /* ── Transitions ─────────────────────────────────────────── */
+  --ease-out-quad:  cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+
+  --dur-fast:     150ms;
+  --dur-normal:   220ms;
+  --dur-slow:     300ms;
+  --dur-xslow:    400ms;
+
+  /* ── Z-index ─────────────────────────────────────────────── */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:   10;
+  --z-overlay: 100;
+  --z-nav:     200;
+  --z-modal:   300;
+}
+
+/* Reduced motion — always respect this */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast:   0ms;
+    --dur-normal: 0ms;
+    --dur-slow:   0ms;
+    --dur-xslow:  0ms;
+  }
+}

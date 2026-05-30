@@ -1,0 +1,145 @@
+/* ============================================================
+   HERO — Full-viewport editorial landing section
+   ============================================================ */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+}
+
+/* ── Content Block ───────────────────────────────────────── */
+.hero__content {
+  max-width: 900px;
+  padding: var(--sp-80) var(--margin-desktop);
+  padding-top: var(--sp-64);
+}
+
+/* ── Overline ────────────────────────────────────────────── */
+.hero__overline {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-11);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--color-accent);
+  margin-bottom: var(--sp-32);
+}
+
+/* ── Headline ────────────────────────────────────────────── */
+.hero__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--fs-56), 6.5vw, var(--fs-80));
+  font-weight: 400;
+  color: var(--color-text-primary);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-tight);
+  max-width: 760px;
+}
+
+/* Italic emphasis within headline */
+.hero__headline em {
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+/* ── Paragraph ───────────────────────────────────────────── */
+.hero__paragraph {
+  font-family: var(--font-sans);
+  font-size: var(--fs-17);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-loose);
+  max-width: 520px;
+  margin-top: var(--sp-28);
+}
+
+/* ── CTA Row ─────────────────────────────────────────────── */
+.hero__cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--sp-16);
+  margin-top: var(--sp-48);
+}
+
+/* ── Decorative Elements ─────────────────────────────────── */
+
+/* Vertical watermark text */
+.hero__watermark {
+  position: absolute;
+  right: var(--sp-40);
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: center center;
+  font-family: var(--font-sans);
+  font-size: var(--fs-10);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.05);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Hairline across viewport */
+.hero__hairline {
+  position: absolute;
+  bottom: 22%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero__content {
+    padding: var(--sp-64) var(--margin-tablet);
+  }
+
+  .hero__watermark {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    align-items: flex-start;
+  }
+
+  .hero__content {
+    padding: var(--sp-56) var(--margin-mobile);
+    padding-top: var(--sp-40);
+  }
+
+  .hero__overline {
+    margin-bottom: var(--sp-20);
+  }
+
+  .hero__paragraph {
+    font-size: var(--fs-15);
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--sp-12);
+    margin-top: var(--sp-40);
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .scroll-indicator {
+    display: none; /* hide on mobile — too cramped */
+  }
+}

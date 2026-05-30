@@ -1,0 +1,165 @@
+/* ============================================================
+   ABOUT — Two-column layout with intro, philosophy, timeline, skills
+   ============================================================ */
+
+.about {
+  background: var(--color-bg);
+}
+
+/* ── Grid ────────────────────────────────────────────────── */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-80);
+  margin-top: var(--sp-64);
+  align-items: start;
+}
+
+/* ── LEFT COLUMN ─────────────────────────────────────────── */
+.about__left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Intro heading */
+.about__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, var(--fs-44));
+  font-weight: 400;
+  color: var(--color-text-primary);
+  letter-spacing: var(--ls-snug);
+  line-height: var(--lh-snug);
+  max-width: 520px;
+}
+
+/* Body paragraphs */
+.about__body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-16);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-loose);
+  margin-top: var(--sp-20);
+  max-width: 520px;
+}
+
+/* Philosophy block */
+.about__philosophy {
+  font-family: var(--font-sans);
+  font-size: var(--fs-15);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-loose);
+  margin-top: var(--sp-12);
+  max-width: 520px;
+}
+
+/* ── RIGHT COLUMN ────────────────────────────────────────── */
+.about__right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-40);
+}
+
+/* ── Portrait Placeholder ────────────────────────────────── */
+.about__portrait {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-12);
+  overflow: hidden;
+}
+
+.about__portrait-monogram {
+  font-family: var(--font-serif);
+  font-size: var(--fs-56);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  line-height: 1;
+}
+
+.about__portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-md);
+}
+
+.about__portrait-caption {
+  position: absolute;
+  bottom: var(--sp-16);
+  font-family: var(--font-sans);
+  font-size: var(--fs-11);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* Subtle corner accent lines */
+.about__portrait::before,
+.about__portrait::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: var(--color-accent-border);
+  border-style: solid;
+}
+
+.about__portrait::before {
+  top: 16px;
+  left: 16px;
+  border-width: 1px 0 0 1px;
+}
+
+.about__portrait::after {
+  bottom: 16px;
+  right: 16px;
+  border-width: 0 1px 1px 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-56);
+  }
+
+  .about__right {
+    grid-row: 1; /* portrait first on tablet */
+    flex-direction: row;
+    gap: var(--sp-32);
+    align-items: flex-start;
+  }
+
+  .about__portrait {
+    max-width: 280px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__grid {
+    gap: var(--sp-40);
+    margin-top: var(--sp-40);
+  }
+
+  .about__right {
+    flex-direction: column;
+  }
+
+  .about__portrait {
+    max-width: 100%;
+    aspect-ratio: 3 / 2;
+  }
+}

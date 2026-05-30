@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Abhijeet Raj — CS student and software developer. Building precise, purposeful digital experiences at the intersection of engineering and design." />
+  <meta name="author" content="Abhijeet Raj" />
+  <meta name="theme-color" content="#0F1115" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abhijeet Raj — Software Developer" />
+  <meta property="og:description"
+    content="CS student and software developer. Building thoughtful digital experiences." />
+  <meta property="og:url" content="https://abhijeetraj.dev" />
+  <meta property="og:image" content="assets/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Abhijeet Raj — Software Developer" />
+  <meta name="twitter:description"
+    content="CS student and software developer. Building thoughtful digital experiences." />
+
+  <title>Abhijeet Raj — Software Developer</title>
+
+  <!-- Preconnect to external origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
+  <!-- Fonts — EB Garamond (display) + Inter (UI) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- No-JS → JS class swap. Inline intentionally — zero network cost. -->
+  <script>document.documentElement.classList.replace('no-js', 'js')</script>
+
+  <!-- Structured data — Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abhijeet Raj",
+    "url": "https://abhijeetraj.dev",
+    "jobTitle": "Software Developer",
+    "description": "CS student and software developer building precise, purposeful digital experiences.",
+    "sameAs": [
+      "https://github.com/abhijeetraj01",
+      "https://linkedin.com/in/abhijeetraj07"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Skip link — keyboard / screen-reader users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+
+  <!-- NAVBAR -->
+  <header role="banner">
+    <nav class="navbar" id="navbar" aria-label="Primary navigation">
+      <div class="navbar__container">
+
+        <a class="navbar__logo" href="#home" aria-label="Abhijeet Raj — back to top">
+          AR
+        </a>
+
+        <!-- Desktop nav -->
+        <div class="navbar__right">
+          <ul class="navbar__links" role="list">
+            <li><a class="navbar__link is-active" href="#home" data-nav="home" aria-current="location">Home</a></li>
+            <li><a class="navbar__link" href="#about" data-nav="about">About</a></li>
+            <li><a class="navbar__link" href="#projects" data-nav="projects">Projects</a></li>
+            <li><a class="navbar__link" href="#resume" data-nav="resume">Resume</a></li>
+          </ul>
+
+          <a class="navbar__github" href="https://github.com/abhijeetraj01" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub profile (opens in new tab)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button class="navbar__hamburger" id="navHamburger" type="button" aria-label="Open navigation menu"
+          aria-expanded="false" aria-controls="navOverlay">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Mobile overlay -->
+      <div class="navbar__overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+        <nav aria-label="Mobile navigation">
+          <ul class="navbar__overlay-links" role="list">
+            <li><a class="navbar__overlay-link" href="#home" data-overlay-link>Home</a></li>
+            <li><a class="navbar__overlay-link" href="#about" data-overlay-link>About</a></li>
+            <li><a class="navbar__overlay-link" href="#projects" data-overlay-link>Projects</a></li>
+            <li><a class="navbar__overlay-link" href="#resume" data-overlay-link>Resume</a></li>
+          </ul>
+        </nav>
+        <div class="navbar__overlay-socials" aria-label="Social links">
+          <a class="navbar__overlay-social" href="https://github.com/abhijeetraj01" target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+          <a class="navbar__overlay-social" href="https://linkedin.com/in/abhijeetraj01" target="_blank"
+            rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- MAIN CONTENT-->
+  <main id="main" tabindex="-1">
+
+
+    <!--  HERO  -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+
+      <div class="hero__content">
+        <span class="hero__overline" aria-hidden="true">Portfolio</span>
+
+        <h1 class="hero__headline" id="hero-heading">
+          Building thoughtful<br>
+          <em>digital experiences.</em>
+        </h1>
+
+        <p class="hero__paragraph">
+          I'm Abhijeet Raj — a CS student and software developer focused on crafting systems that are precise,
+          purposeful, and well&#8209;considered. I work at the boundary of engineering and design.
+        </p>
+
+        <div class="hero__cta" role="group" aria-label="Call to action">
+          <a class="btn btn--primary" href="#projects" id="cta-view-projects">
+            View Projects
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M3 8h10M9 4l4 4-4 4" />
+            </svg>
+          </a>
+          <a class="btn btn--ghost" href="assets/resume.pdf" id="cta-download-resume" download
+            aria-label="Download resume as PDF">
+            Download Resume
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M8 3v7M5 8l3 3 3-3M3 13h10" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Decorative — screen readers skip -->
+      <span class="hero__watermark" aria-hidden="true">ABHIJEET RAJ</span>
+      <div class="hero__hairline" aria-hidden="true"></div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-indicator__line"></div>
+        <span class="scroll-indicator__text">Scroll</span>
+      </div>
+
+    </section>
+
+
+    <!--  ABOUT  -->
+    <section class="about section-padding" id="about" aria-labelledby="about-heading">
+      <div class="container">
+
+        <div class="section-marker" aria-hidden="true">
+          <span class="section-marker__number">02</span>
+          <div class="section-marker__line"></div>
+          <span class="section-marker__label">About</span>
+        </div>
+
+        <div class="about__grid">
+
+          <!-- Left column -->
+          <div class="about__left">
+
+            <div class="about__block" data-reveal>
+              <h2 class="about__heading" id="about-heading">
+                I build things that work,<br>and things that feel right.
+              </h2>
+              <p class="about__body">
+                I’m currently pursuing a Bachelor’s in Technology with a major in Computer Science.
+                I’m passionate about creating seamless and intuitive user experiences, exploring LLMs, AI Agents and
+                staying up-to-date with the Latest Technologies.
+                <br>
+                Alongside development, I have a keen interest in Graphic Design where I enjoy creating posters,
+                presentations, and visual content.
+              </p>
+            </div>
+
+            <hr class="divider" data-reveal />
+
+            <div class="about__block" data-reveal>
+              <p class="col-label">My Philosophy</p>
+              <p class="about__philosophy">
+                Great digital experiences balance functionality, aesthetics, and interaction. I believe software should
+                feel intuitive, visually engaging, and effortless to use. Every detail from performance and usability to
+                motion and design should serve a purpose, creating interfaces that not only work seamlessly but also
+                leave a lasting impression.
+              </p>
+            </div>
+
+            <hr class="divider" data-reveal />
+
+            <div class="about__block" data-reveal>
+              <p class="col-label">Technical Skills</p>
+              <ul class="skills-grid" role="list" aria-label="Technical skills">
+                <li class="skill-pill">HTML5</li>
+                <li class="skill-pill">CSS3</li>
+                <li class="skill-pill">JavaScript</li>
+                <li class="skill-pill">Python</li>
+                <li class="skill-pill">C / C++</li>
+                <li class="skill-pill">Java</li>
+                <li class="skill-pill">ReactJS</li>
+                <li class="skill-pill">NextJS</li>
+                <li class="skill-pill">NodeJS</li>
+                <li class="skill-pill">TypeScript</li>
+                <li class="skill-pill">SQL</li>
+                <li class="skill-pill">MongoDB</li>
+                <li class="skill-pill">Docker</li>
+                <li class="skill-pill">Linux</li>
+                <li class="skill-pill">Git/GitHub</li>
+                <li class="skill-pill">Stitch</li>
+                <li class="skill-pill">Figma</li>
+                <li class="skill-pill">Adobe Creative Suite</li>
+                <li class="skill-pill">Canva</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Right column -->
+          <div class="about__right">
+
+            <!-- Portrait -->
+            <figure class="about__portrait" data-reveal>
+
+              <img src="assets/portrait.png" alt="Abhijeet Raj" width="480" height="600" loading="lazy"
+                decoding="async" />
+
+              <div class="about__portrait-placeholder" aria-label="Portrait placeholder">
+                <span class="about__portrait-monogram" aria-hidden="true"></span>
+              </div>
+              <figcaption class="about__portrait-caption">
+              </figcaption>
+            </figure>
+
+            <!-- Timeline -->
+            <div class="about__timeline" data-reveal>
+              <p class="col-label">Experience</p>
+              <ol class="timeline" aria-label="Experience timeline">
+
+                <li class="timeline__item">
+                  <time class="timeline__period" datetime="2024">2025 &ndash; Present</time>
+                  <h3 class="timeline__role">Open Source Contributor</h3>
+                  <p class="timeline__org">Independent</p>
+                  <ul class="timeline__bullets" aria-label="Responsibilities">
+                    <li class="timeline__bullet">Contributing to open-source projects and developer tooling</li>
+                    <li class="timeline__bullet">Exploring codebases, reviewing issues, and submitting pull requests
+                    </li>
+                    <li class="timeline__bullet">Learning collaborative software development through real-world
+                      contributions</li>
+                  </ul>
+                </li>
+
+                <li class="timeline__item">
+                  <time class="timeline__period" datetime="2023">2023 &ndash; Present</time>
+                  <h3 class="timeline__role">Freelancer</h3>
+                  <p class="timeline__org">Self-employed</p>
+                  <ul class="timeline__bullets">
+                    <li class="timeline__bullet">Built responsive web applications for clients</li>
+                    <li class="timeline__bullet">Designed graphics, branding assets, and marketing materials tailored to
+                      client needs</li>
+                  </ul>
+                </li>
+
+                <li class="timeline__item">
+                  <time class="timeline__period" datetime="2023">2025</time>
+                  <h3 class="timeline__role">Design Head</h3>
+                  <p class="timeline__org">Entrepreneurship Cell, FET GKV</p>
+                  <ul class="timeline__bullets">
+                    <li class="timeline__bullet">Led the visual design efforts for community events and initiatives</li>
+                    <li class="timeline__bullet">Designed posters, social media creatives, and promotional assets</li>
+                    <li class="timeline__bullet">Collaborated with organizing teams to communicate ideas through
+                      impactful visual design</li>
+                  </ul>
+                </li>
+
+              </ol>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--  PROJECTS  -->
+    <section class="projects section-padding" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+
+        <div class="section-marker" aria-hidden="true">
+          <span class="section-marker__number">03</span>
+          <div class="section-marker__line"></div>
+          <span class="section-marker__label">Projects</span>
+        </div>
+
+        <header class="projects__header">
+          <h2 class="projects__title" id="projects-heading" data-reveal>Selected Work</h2>
+          <p class="projects__subtitle" data-reveal>A curated set of projects built with intention.</p>
+        </header>
+
+        <!-- Featured project -->
+        <article class="project-featured" data-reveal aria-labelledby="featured-title">
+          <div class="project-featured__image" role="img" aria-label="Portfolio website code preview">
+            <div class="project-featured__image-placeholder" aria-hidden="true">
+              <pre class="project-featured__image-code">gsap.from(el, {
+  y: 40,
+  opacity: 0,
+  duration: 1,
+  ease: 'power3.out',
+  stagger: 0.14,
+  scrollTrigger: {
+    trigger: el,
+    start: 'top 88%'
+  }
+});</pre>
+            </div>
+          </div>
+
+          <div class="project-featured__content">
+            <div class="project-featured__tags" role="list" aria-label="Project tags">
+              <span class="tag tag--featured" role="listitem">Featured</span>
+              <span class="tag tag--accent" role="listitem">Web App</span>
+            </div>
+
+            <h3 class="project-featured__title" id="featured-title">Portfolio Website</h3>
+            <p class="project-featured__description">
+              A personal portfolio built with editorial design principles, GSAP scroll animations, and a custom design
+              system. Every spacing decision, easing curve, and typographic detail is deliberate.
+            </p>
+
+            <div class="project-featured__stack">
+              <p class="project-featured__stack-label">Built with</p>
+              <ul class="project-featured__stack-pills" role="list" aria-label="Technologies used">
+                <li class="skill-pill">HTML / CSS</li>
+                <li class="skill-pill">JavaScript</li>
+                <li class="skill-pill">GSAP</li>
+                <li class="skill-pill">ScrollTrigger</li>
+              </ul>
+            </div>
+
+            <div class="project-featured__actions">
+              <a class="btn btn--primary btn--sm" href="https://github.com/abhijeetraj01" target="_blank"
+                rel="noopener noreferrer" aria-label="View source on GitHub (opens in new tab)">
+                GitHub
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M4 12L12 4M6 4h6v6" />
+                </svg>
+              </a>
+              <a class="btn btn--ghost btn--sm" href="#" aria-label="View live demo">
+                Live Demo
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M3 8h10M9 4l4 4-4 4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project card grid -->
+        <ul class="projects__grid" role="list" aria-label="More projects">
+
+          <li>
+            <article class="project-card" data-reveal aria-labelledby="card-1-title">
+              <div class="project-card__image" role="img" aria-label="REST API Service project preview">
+                <div class="project-card__image-placeholder" aria-hidden="true"></div>
+                <div class="project-card__overlay" aria-hidden="true">
+                  <span class="project-card__overlay-text">View Project &rarr;</span>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <ul class="project-card__tags" role="list" aria-label="Tags">
+                  <li class="tag tag--accent">Python</li>
+                  <li class="tag">FastAPI</li>
+                </ul>
+                <h3 class="project-card__title" id="card-1-title">REST API Service</h3>
+                <p class="project-card__description">
+                  Production-grade REST API with authentication, rate limiting, and full documentation. Built with
+                  FastAPI and PostgreSQL.
+                </p>
+                <div class="project-card__links">
+                  <a class="project-card__link project-card__link--primary" href="https://github.com/abhijeetraj01"
+                    target="_blank" rel="noopener noreferrer" aria-label="View REST API Service on GitHub">
+                    GitHub &#8599;
+                  </a>
+                  <a class="project-card__link" href="#" aria-label="View REST API Service demo">
+                    Demo &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card" data-reveal aria-labelledby="card-2-title">
+              <div class="project-card__image" role="img" aria-label="Memory Allocator project preview">
+                <div class="project-card__image-placeholder" aria-hidden="true"></div>
+                <div class="project-card__overlay" aria-hidden="true">
+                  <span class="project-card__overlay-text">View Project &rarr;</span>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <ul class="project-card__tags" role="list" aria-label="Tags">
+                  <li class="tag tag--accent">C++</li>
+                  <li class="tag">Systems</li>
+                </ul>
+                <h3 class="project-card__title" id="card-2-title">Memory Allocator</h3>
+                <p class="project-card__description">
+                  Custom memory allocator implementing first-fit and best-fit strategies. A focused exercise in
+                  low-level systems programming.
+                </p>
+                <div class="project-card__links">
+                  <a class="project-card__link project-card__link--primary" href="https://github.com/abhijeetraj01"
+                    target="_blank" rel="noopener noreferrer" aria-label="View Memory Allocator on GitHub">
+                    GitHub &#8599;
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card" data-reveal aria-labelledby="card-3-title">
+              <div class="project-card__image" role="img" aria-label="Dev Tooling CLI project preview">
+                <div class="project-card__image-placeholder" aria-hidden="true"></div>
+                <div class="project-card__overlay" aria-hidden="true">
+                  <span class="project-card__overlay-text">View Project &rarr;</span>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <ul class="project-card__tags" role="list" aria-label="Tags">
+                  <li class="tag tag--accent">JavaScript</li>
+                  <li class="tag">CLI</li>
+                </ul>
+                <h3 class="project-card__title" id="card-3-title">Dev Tooling CLI</h3>
+                <p class="project-card__description">
+                  A command-line tool automating common developer workflows — scaffold projects, configure environments,
+                  and ship faster.
+                </p>
+                <div class="project-card__links">
+                  <a class="project-card__link project-card__link--primary" href="https://github.com/abhijeetraj01"
+                    target="_blank" rel="noopener noreferrer" aria-label="View Dev Tooling CLI on GitHub">
+                    GitHub &#8599;
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="project-card" data-reveal aria-labelledby="card-4-title">
+              <div class="project-card__image" role="img" aria-label="Data Structures Library project preview">
+                <div class="project-card__image-placeholder" aria-hidden="true"></div>
+                <div class="project-card__overlay" aria-hidden="true">
+                  <span class="project-card__overlay-text">View Project &rarr;</span>
+                </div>
+              </div>
+              <div class="project-card__body">
+                <ul class="project-card__tags" role="list" aria-label="Tags">
+                  <li class="tag tag--accent">Python</li>
+                  <li class="tag">Algorithms</li>
+                </ul>
+                <h3 class="project-card__title" id="card-4-title">Data Structures Library</h3>
+                <p class="project-card__description">
+                  Clean, documented implementations of classic data structures and algorithms. A personal reference and
+                  teaching resource.
+                </p>
+                <div class="project-card__links">
+                  <a class="project-card__link project-card__link--primary" href="https://github.com/abhijeetraj01"
+                    target="_blank" rel="noopener noreferrer" aria-label="View Data Structures Library on GitHub">
+                    GitHub &#8599;
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+
+    <!--  RESUME -->
+    <section class="resume section-padding" id="resume" aria-labelledby="resume-heading">
+      <div class="container">
+
+        <div class="section-marker" aria-hidden="true">
+          <span class="section-marker__number">04</span>
+          <div class="section-marker__line"></div>
+          <span class="section-marker__label">Resume</span>
+        </div>
+
+        <h2 class="resume__heading" id="resume-heading" data-reveal>
+          Experience &amp; Education
+        </h2>
+
+        <div class="resume__download-row" data-reveal>
+          <a class="btn btn--primary btn--sm" href="assets/resume.pdf" download aria-label="Download resume PDF">
+            Download Resume
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M8 3v7M5 8l3 3 3-3M3 13h10" />
+            </svg>
+          </a>
+          <span class="resume__download-label" aria-label="File format: PDF, 1 page">PDF &mdash; 1 page</span>
+        </div>
+
+        <div class="resume__grid">
+
+          <!-- Work experience -->
+          <div class="resume__col">
+            <p class="col-label" data-reveal>Work Experience</p>
+            <ol class="timeline" aria-label="Work experience">
+
+              <li class="timeline__item">
+                <time class="timeline__period" datetime="2024">2025 &ndash; Present</time>
+                <h3 class="timeline__role">Open Source Contributor</h3>
+                <p class="timeline__org">Independent</p>
+                <ul class="timeline__bullets" aria-label="Responsibilities">
+                  <li class="timeline__bullet">Contributing to open-source projects and developer tooling</li>
+                  <li class="timeline__bullet">Exploring codebases, reviewing issues, and submitting pull requests</li>
+                  <li class="timeline__bullet">Learning collaborative software development through real-world
+                    contributions</li>
+                </ul>
+              </li>
+
+              <li class="timeline__item">
+                <time class="timeline__period" datetime="2023">2023 &ndash; Present</time>
+                <h3 class="timeline__role">Freelancer</h3>
+                <p class="timeline__org">Self-employed</p>
+                <ul class="timeline__bullets">
+                  <li class="timeline__bullet">Built responsive web applications for clients</li>
+                  <li class="timeline__bullet">Designed graphics, branding assets, and marketing materials tailored to
+                    client needs</li>
+                </ul>
+              </li>
+
+              <li class="timeline__item">
+                <time class="timeline__period" datetime="2023">2025</time>
+                <h3 class="timeline__role">Design Head</h3>
+                <p class="timeline__org">Entrepreneurship Cell, FET GKV</p>
+                <ul class="timeline__bullets">
+                  <li class="timeline__bullet">Led the visual design efforts for community events and initiatives</li>
+                  <li class="timeline__bullet">Designed posters, social media creatives, and promotional assets</li>
+                  <li class="timeline__bullet">Collaborated with organizing teams to communicate ideas through impactful
+                    visual design</li>
+                </ul>
+              </li>
+
+            </ol>
+          </div>
+
+          <!-- Education + Skills + Achievements -->
+          <div class="resume__col">
+            <p class="col-label" data-reveal>Education</p>
+
+            <ol class="timeline" aria-label="Education">
+              <li class="timeline__item" data-reveal>
+                <time class="timeline__period" datetime="2024">2023 &ndash; 2027</time>
+                <h3 class="timeline__role">B.Tech, Computer Science</h3>
+                <p class="timeline__org">Gurukula Kangri Vishwavidyalaya, Haridwar</p>
+                <div class="timeline__notes">
+                  <p class="timeline__note">Focus: Systems Design, Web Development, Algorithms, AI&ML</p>
+                </div>
+              </li>
+            </ol>
+
+            <hr class="divider" data-reveal />
+
+            <div data-reveal>
+              <p class="col-label">Core Skills</p>
+
+              <div class="skill-group">
+                <p class="skill-group__label">Languages</p>
+                <ul class="skill-group__pills" role="list">
+                  <li class="skill-pill">Python</li>
+                  <li class="skill-pill">Java</li>
+                  <li class="skill-pill">C / C++</li>
+                  <li class="skill-pill">JavaScript</li>
+                  <li class="skill-pill">SQL</li>
+                </ul>
+              </div>
+
+              <div class="skill-group">
+                <p class="skill-group__label">Frameworks</p>
+                <ul class="skill-group__pills" role="list">
+                  <li class="skill-pill">ReactJs</li>
+                  <li class="skill-pill">NextJS</li>
+                  <li class="skill-pill">NodeJS</li>
+                  <li class="skill-pill">REST APIs</li>
+                </ul>
+              </div>
+
+              <div class="skill-group">
+                <p class="skill-group__label">Tools &amp; Platforms</p>
+                <ul class="skill-group__pills" role="list">
+                  <li class="skill-pill">Git/Github</li>
+                  <li class="skill-pill">Claude Code</li>
+                  <li class="skill-pill">Antigravity</li>
+                  <li class="skill-pill">Google Stitch</li>
+                </ul>
+              </div>
+            </div>
+
+            <hr class="divider" data-reveal />
+
+            <div data-reveal>
+              <p class="col-label">Achievements</p>
+              <ul class="cert-list" aria-label="Achievements and certifications">
+                <!-- <li class="cert-list__item">GitHub Arctic Code Vault Contributor</li> -->
+                <li class="cert-list__item">Completed a Data Analytics certification from Physics Wallah</li>
+                <li class="cert-list__item">100+ LeetCode problems solved</li>
+                <li class="cert-list__item">Active open source contributor</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <!--FOOTER-->
+  <footer role="contentinfo">
+
+    <!-- Closing CTA -->
+    <section class="footer-cta" aria-labelledby="contact-heading">
+      <div class="footer-cta__inner">
+        <span class="footer-cta__label" data-reveal aria-hidden="true">Let&rsquo;s Connect</span>
+
+        <h2 class="footer-cta__heading" id="contact-heading" data-reveal>
+          Want to work together?
+        </h2>
+
+        <p class="footer-cta__sub" data-reveal>
+          I&rsquo;m open to internships, collaborations, and interesting conversations.
+        </p>
+
+        <address class="footer-cta__address">
+          <a class="footer-cta__email" href="mailto:abhijeetraj100602@gmail.com" data-reveal
+            aria-label="Send email to abhijeetraj at email dot com">
+            abhijeetraj100602@gmail.com
+          </a>
+        </address>
+
+        <div class="footer-cta__badge" data-reveal>
+          <div class="badge-available" aria-label="Currently available for opportunities">
+            <span class="badge-available__dot" aria-hidden="true"></span>
+            Available for opportunities
+          </div>
+        </div>
+
+        <div class="footer-cta__socials" data-reveal>
+          <a class="btn btn--primary btn--sm" href="https://github.com/abhijeetraj01" target="_blank"
+            rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)">
+            GitHub &#8599;
+          </a>
+          <a class="btn btn--ghost btn--sm" href="https://linkedin.com/in/abhijeetraj07" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">
+            LinkedIn &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer bar -->
+    <div class="footer">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <span class="footer__monogram" aria-hidden="true">AR</span>
+          <span class="footer__tagline">Designed with intention.</span>
+        </div>
+
+        <nav class="footer__center" aria-label="Footer navigation">
+          <ul class="footer__nav" role="list">
+            <li><a class="footer__nav-link" href="#home">Home</a></li>
+            <li class="footer__nav-sep" aria-hidden="true">&middot;</li>
+            <li><a class="footer__nav-link" href="#about">About</a></li>
+            <li class="footer__nav-sep" aria-hidden="true">&middot;</li>
+            <li><a class="footer__nav-link" href="#projects">Projects</a></li>
+            <li class="footer__nav-sep" aria-hidden="true">&middot;</li>
+            <li><a class="footer__nav-link" href="#resume">Resume</a></li>
+          </ul>
+          <p class="footer__copy">
+            <small>&copy; 2025 Abhijeet Raj</small>
+          </p>
+        </nav>
+
+        <div class="footer__right">
+          <a class="footer__social" href="https://github.com/abhijeetraj01" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub (opens in new tab)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            Github
+          </a>
+          <a class="footer__social" href="https://linkedin.com/in/abhijeetraj07" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
+              <line x1="2" y1="9" x2="6" y2="9" />
+              <line x1="4" y1="6" x2="4" y2="18" />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom" aria-hidden="true">
+        <p class="footer__built">Built with precision. Open to collaboration.</p>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="js/navbar.js"></script>
+  <script defer src="js/animations.js"></script>
+  <script defer src="js/projects.js"></script>
+  <script defer src="js/main.js"></script>
+
+</body>
+
+</html>

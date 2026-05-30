@@ -1,0 +1,348 @@
+/* ============================================================
+   COMPONENTS — Buttons, Tags, Skill Chips, Section Markers
+   Reusable atomic UI elements.
+   ============================================================ */
+
+/* ── Section Marker ──────────────────────────────────────── */
+.section-marker {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-16);
+  margin-bottom: var(--sp-32);
+}
+
+.section-marker__number {
+  font-family: var(--font-serif);
+  font-size: var(--fs-13);
+  font-style: italic;
+  color: var(--color-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.section-marker__line {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.section-marker__label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-11);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--color-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Overline Label ──────────────────────────────────────── */
+.overline {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--fs-11);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--color-accent);
+}
+
+/* ── Column Label ────────────────────────────────────────── */
+.col-label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-11);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  color: var(--color-accent);
+  margin-bottom: var(--sp-16);
+}
+
+/* ── Hairline Divider ────────────────────────────────────── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--sp-32) 0;
+}
+
+.divider--subtle {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+
+/* Base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-8);
+  font-family: var(--font-sans);
+  font-size: var(--fs-12);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  padding: 0.8125rem 2.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  transition:
+    color       var(--dur-slow) var(--ease-out-quad),
+    background  var(--dur-slow) var(--ease-out-quad),
+    border-color var(--dur-slow) var(--ease-out-quad),
+    transform   var(--dur-normal) var(--ease-out-quad);
+  will-change: transform;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Primary (outlined gold → fill on hover) */
+.btn--primary {
+  color: var(--color-accent);
+  border-color: var(--color-accent-border);
+  background: transparent;
+}
+
+.btn--primary:hover {
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* Ghost (subtle white border) */
+.btn--ghost {
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-hover);
+  background: transparent;
+}
+
+.btn--ghost:hover {
+  color: var(--color-text-primary);
+  border-color: var(--color-accent-border);
+}
+
+/* Text link (no border) */
+.btn--text {
+  color: var(--color-text-secondary);
+  border-color: transparent;
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  letter-spacing: var(--ls-normal);
+  text-transform: none;
+  font-size: var(--fs-13);
+  text-underline-offset: 3px;
+}
+
+.btn--text:hover {
+  color: var(--color-accent);
+}
+
+.btn--text::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: width var(--dur-slow) var(--ease-out-cubic);
+}
+
+.btn--text:hover::after {
+  width: 100%;
+}
+
+/* Small variant */
+.btn--sm {
+  font-size: var(--fs-11);
+  padding: 0.625rem 1.5rem;
+}
+
+/* Icon + text layout */
+.btn__icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* ── Tag / Tech Chip ─────────────────────────────────────── */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: var(--fs-11);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--radius-sm);
+  transition:
+    color        var(--dur-normal) var(--ease-out-quad),
+    border-color var(--dur-normal) var(--ease-out-quad);
+}
+
+.tag:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent-border);
+}
+
+/* Accent variant (gold text) */
+.tag--accent {
+  color: var(--color-accent);
+  border-color: var(--color-accent-border);
+  background: var(--color-accent-ghost);
+}
+
+/* Featured badge */
+.tag--featured {
+  color: var(--color-accent);
+  border-color: var(--color-accent-border);
+  background: var(--color-accent-ghost);
+  font-size: var(--fs-10);
+}
+
+/* ── Skill Pill ──────────────────────────────────────────── */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: var(--fs-12);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  padding: 0.375rem 0.875rem;
+  border-radius: var(--radius-sm);
+  cursor: default;
+  transition:
+    color        var(--dur-normal) var(--ease-out-quad),
+    border-color var(--dur-normal) var(--ease-out-quad);
+}
+
+.skill-pill:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent-border);
+}
+
+/* ── Availability Badge ──────────────────────────────────── */
+.badge-available {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-8);
+  font-family: var(--font-sans);
+  font-size: var(--fs-11);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  padding: 0.3125rem 0.875rem;
+  border-radius: var(--radius-pill);
+}
+
+.badge-available__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4CAF50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.6);
+  flex-shrink: 0;
+}
+
+/* ── Tags Row ────────────────────────────────────────────── */
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-8);
+}
+
+/* ── Skills Grid ─────────────────────────────────────────── */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-8);
+  margin-top: var(--sp-16);
+}
+
+/* ── GitHub Icon SVG ─────────────────────────────────────── */
+.icon-github {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-secondary);
+  transition: color var(--dur-normal) var(--ease-out-quad);
+}
+
+.icon-github:hover {
+  color: var(--color-text-primary);
+}
+
+/* ── Scroll Indicator ────────────────────────────────────── */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-8);
+  position: absolute;
+  bottom: var(--sp-40);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-indicator__line {
+  width: 1px;
+  height: 40px;
+  background: var(--color-accent-dim);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+.scroll-indicator__text {
+  font-family: var(--font-sans);
+  font-size: var(--fs-10);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  color: var(--color-text-secondary);
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-indicator__line {
+    animation: none;
+  }
+}
+
+/* ── Container / Layout Utilities ────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--margin-desktop);
+}
+
+.section-padding {
+  padding-top: var(--sp-120);
+  padding-bottom: var(--sp-120);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--margin-mobile);
+  }
+
+  .section-padding {
+    padding-top: var(--sp-80);
+    padding-bottom: var(--sp-80);
+  }
+}

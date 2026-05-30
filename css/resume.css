@@ -1,0 +1,118 @@
+/* ============================================================
+   RESUME — Two-column timeline layout with download CTA
+   ============================================================ */
+
+.resume {
+  background: var(--color-bg);
+}
+
+/* ── Section heading ─────────────────────────────────────── */
+.resume__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--fs-40), 4.2vw, var(--fs-52));
+  font-weight: 400;
+  color: var(--color-text-primary);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-snug);
+  margin-top: var(--sp-24);
+}
+
+/* ── Download row ────────────────────────────────────────── */
+.resume__download-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-16);
+  margin-top: var(--sp-24);
+  flex-wrap: wrap;
+}
+
+.resume__download-label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-11);
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+/* ── Two-column layout ───────────────────────────────────── */
+.resume__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-80);
+  margin-top: var(--sp-64);
+  align-items: start;
+}
+
+/* ── Column headings ─────────────────────────────────────── */
+.resume__col-header {
+  margin-bottom: var(--sp-32);
+}
+
+/* ── Skill Groups ────────────────────────────────────────── */
+.skill-group {
+  margin-bottom: var(--sp-20);
+}
+
+.skill-group__label {
+  font-family: var(--font-sans);
+  font-size: var(--fs-11);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wider);
+  margin-bottom: var(--sp-8);
+}
+
+.skill-group__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-8);
+}
+
+/* ── Certifications ──────────────────────────────────────── */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+  margin-top: var(--sp-12);
+}
+
+.cert-list__item {
+  font-family: var(--font-sans);
+  font-size: var(--fs-13);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  padding-left: var(--sp-16);
+  position: relative;
+}
+
+.cert-list__item::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
+  font-size: var(--fs-16);
+  line-height: 1.5;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .resume__grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-56);
+  }
+}
+
+@media (max-width: 768px) {
+  .resume__grid {
+    margin-top: var(--sp-40);
+    gap: var(--sp-48);
+  }
+
+  .resume__heading {
+    font-size: var(--fs-40);
+  }
+
+  .resume__download-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

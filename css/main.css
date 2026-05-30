@@ -1,0 +1,125 @@
+/* ============================================================
+   MAIN.CSS — Root entry point
+   Import order follows the cascade intentionally:
+   tokens → reset → atoms → components → sections
+   ============================================================ */
+
+@import './tokens.css';
+@import './reset.css';
+@import './components.css';
+@import './navbar.css';
+@import './hero.css';
+@import './about.css';
+@import './timeline.css';
+@import './projects.css';
+@import './resume.css';
+@import './footer.css';
+
+
+/* ── Skip link ───────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--sp-16);
+  z-index: calc(var(--z-modal) + 10);
+  padding: var(--sp-8) var(--sp-20);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-family: var(--font-sans);
+  font-size: var(--fs-13);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  /* Transition only when visible to avoid flash */
+  transition: top 0ms;
+}
+
+.skip-link:focus {
+  top: var(--sp-16);
+  outline: 2px solid var(--color-bg);
+  outline-offset: 2px;
+}
+
+
+/* ── No-JS fallback ──────────────────────────────────────── */
+/* When JS hasn't loaded, reveal everything so the page is
+   still readable. The .js class (set inline in <head>)
+   gates all animation initial states.                       */
+.no-js [data-reveal],
+.no-js .section-marker,
+.no-js .navbar {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+
+/* ── Anchor offset for fixed navbar ─────────────────────── */
+[id] {
+  scroll-margin-top: calc(var(--nav-height) + 20px);
+}
+
+
+/* ── Focus ring — global accessible override ─────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Remove focus ring for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+/* ── Print styles ────────────────────────────────────────── */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .navbar,
+  .navbar__overlay,
+  .scroll-indicator,
+  .hero__watermark,
+  .hero__hairline,
+  .footer-cta__socials,
+  .badge-available {
+    display: none !important;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 2rem;
+  }
+
+  .hero__headline {
+    font-size: 2.5rem;
+  }
+
+  a[href]::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.75em;
+    opacity: 0.7;
+  }
+
+  /* Don't print CDN script URLs */
+  a[href^="https://cdn"]::after,
+  a[href^="mailto"]::after {
+    content: '';
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  .section-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

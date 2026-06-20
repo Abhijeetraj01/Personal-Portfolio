@@ -14,6 +14,12 @@ const Projects = (() => {
 
       card.addEventListener('mouseenter', () => {
         rect = card.getBoundingClientRect();
+        gsap.to(card, {
+          y: -4,
+          duration: 0.35,
+          ease: 'power1.out',
+          overwrite: 'auto',
+        });
       });
 
       card.addEventListener('mousemove', (e) => {
@@ -24,6 +30,7 @@ const Projects = (() => {
         const y = (e.clientY - rect.top)  / rect.height - 0.5;
 
         gsap.to(card, {
+          y:                   -4,
           rotateY:             x * 2.5,
           rotateX:            -y * 2.5,
           transformPerspective: 900,
@@ -36,6 +43,7 @@ const Projects = (() => {
       card.addEventListener('mouseleave', () => {
         rect = null;
         gsap.to(card, {
+          y: 0,
           rotateX: 0,
           rotateY: 0,
           duration: 0.55,

@@ -40,15 +40,13 @@
   margin-bottom: var(--sp-28);
   transition:
     border-color var(--dur-slow) var(--ease-out-quad),
-    box-shadow   var(--dur-slow) var(--ease-out-quad),
-    transform    300ms var(--ease-out-quart);
+    box-shadow   var(--dur-slow) var(--ease-out-quad);
   will-change: transform;
 }
 
 .project-featured:hover {
   border-color: var(--color-border-accent);
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-4px);
 }
 
 /* Featured image area */
@@ -175,15 +173,13 @@
   cursor: pointer;
   transition:
     border-color var(--dur-slow) var(--ease-out-quad),
-    box-shadow   var(--dur-slow) var(--ease-out-quad),
-    transform    300ms var(--ease-out-quart);
+    box-shadow   var(--dur-slow) var(--ease-out-quad);
   will-change: transform;
 }
 
 .project-card:hover {
   border-color: var(--color-border-accent);
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-4px);
 }
 
 /* Card image area */

@@ -2,7 +2,7 @@
 
 > A personal portfolio built with editorial design principles, GSAP scroll animations, and a custom design system.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-0F1115?style=for-the-badge&logo=vercel)](https://abhijeetraj.dev)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-0F1115?style=for-the-badge&logo=netlify)](https://abhijeetraj.netlify.app)
 [![GitHub](https://img.shields.io/badge/GitHub-abhijeetraj01-181717?style=for-the-badge&logo=github)](https://github.com/abhijeetraj01)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-abhijeetraj07-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/abhijeetraj07)
 
@@ -10,7 +10,7 @@
 
 ## Overview
 
-A single-page portfolio site for **Abhijeet Raj** — CS student and software developer. Built entirely from scratch with vanilla HTML, CSS, and JavaScript, it emphasises precision in spacing, typography, and motion. Every easing curve and typographic detail is deliberate.
+A single-page portfolio site for **Abhijeet Raj** — CS student and software developer. Built with vanilla HTML, CSS, and JavaScript, it emphasises precision in spacing, typography, and motion. Every easing curve and typographic detail is deliberate.
 
 ---
 
@@ -27,7 +27,7 @@ A single-page portfolio site for **Abhijeet Raj** — CS student and software de
 
 ---
 
-## 🗂️ Project Structure
+## 🗂️ Structure
 
 ```
 personal-portfolio/
@@ -65,7 +65,7 @@ personal-portfolio/
 | Animation   | GSAP 3.12 + ScrollTrigger           |
 | Typography  | EB Garamond (display) · Inter (UI)  |
 | Fonts       | Google Fonts                        |
-| Hosting     | *(GitHub Pages / Vercel)*           |
+| Hosting     | Netlify           |
 
 ---
 
@@ -115,5 +115,5 @@ npx serve .
 ---
 
 <p align="center">
-  <sub>Designed with intention. Built with precision. © 2025 Abhijeet Raj</sub>
+  <sub>Designed with intention. Built with precision. © 2026 Abhijeet Raj</sub>
 </p>

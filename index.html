@@ -335,21 +335,11 @@
           <p class="projects__subtitle" data-reveal>A curated set of projects built with intention.</p>
         </header>
 
-        <!-- Featured project -->
+        <!-- DevScribe -->
         <article class="project-featured" data-reveal aria-labelledby="featured-title">
           <div class="project-featured__image" role="img" aria-label="Portfolio website code preview">
             <div class="project-featured__image-placeholder" aria-hidden="true">
-              <pre class="project-featured__image-code">gsap.from(el, {
-  y: 40,
-  opacity: 0,
-  duration: 1,
-  ease: 'power3.out',
-  stagger: 0.14,
-  scrollTrigger: {
-    trigger: el,
-    start: 'top 88%'
-  }
-});</pre>
+              <pre class="project-featured__image-code"></pre>
             </div>
           </div>
 
@@ -359,19 +349,22 @@
               <span class="tag tag--accent" role="listitem">Web App</span>
             </div>
 
-            <h3 class="project-featured__title" id="featured-title">Portfolio Website</h3>
+            <h3 class="project-featured__title" id="featured-title">DevScribe</h3>
             <p class="project-featured__description">
-              A personal portfolio built with editorial design principles, GSAP scroll animations, and a custom design
-              system. Every spacing decision, easing curve, and typographic detail is deliberate.
+              A custom-built, full-stack blogging platform built from the ground up for developers to share insights on
+              emerging tools and frameworks.
             </p>
 
             <div class="project-featured__stack">
               <p class="project-featured__stack-label">Built with</p>
               <ul class="project-featured__stack-pills" role="list" aria-label="Technologies used">
-                <li class="skill-pill">HTML / CSS</li>
-                <li class="skill-pill">JavaScript</li>
-                <li class="skill-pill">GSAP</li>
-                <li class="skill-pill">ScrollTrigger</li>
+                <li class="skill-pill">NextJS</li>
+                <li class="skill-pill">NodeJS</li>
+                <li class="skill-pill">PostgreSQL</li>
+                <li class="skill-pill">TypeScript</li>
+                <li class="skill-pill">Tailwind CSS</li>
+                <li class="skill-pill">SupaBase</li>
+                <li class="skill-pill">Cloudinary</li>
               </ul>
             </div>
 
@@ -398,30 +391,55 @@
         <!-- Project card grid -->
         <ul class="projects__grid" role="list" aria-label="More projects">
 
+          <!-- data structure library -->
           <li>
             <article class="project-card" data-reveal aria-labelledby="card-1-title">
-              <div class="project-card__image" role="img" aria-label="REST API Service project preview">
+              <div class="project-card__image" role="img" aria-label="Data Structures Library project preview">
                 <div class="project-card__image-placeholder" aria-hidden="true"></div>
-                <div class="project-card__overlay" aria-hidden="true">
-                  <span class="project-card__overlay-text">View Project &rarr;</span>
-                </div>
               </div>
               <div class="project-card__body">
                 <ul class="project-card__tags" role="list" aria-label="Tags">
-                  <li class="tag tag--accent">Python</li>
-                  <li class="tag">FastAPI</li>
+                  <li class="tag tag--accent">TypeScript</li>
+                  <li class="tag">Algorithms</li>
                 </ul>
-                <h3 class="project-card__title" id="card-1-title">REST API Service</h3>
+                <h3 class="project-card__title" id="card-4-title">Data Structures Library</h3>
                 <p class="project-card__description">
-                  Production-grade REST API with authentication, rate limiting, and full documentation. Built with
-                  FastAPI and PostgreSQL.
+                  Clean, documented implementations of classic data structures and algorithms. A personal reference and
+                  teaching resource.
                 </p>
                 <div class="project-card__links">
                   <a class="project-card__link project-card__link--primary" href="https://github.com/abhijeetraj01"
+                    target="_blank" rel="noopener noreferrer" aria-label="View Data Structures Library on GitHub">
+                    GitHub &#8599;
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <!-- personal portfolio website -->
+          <li>
+            <article class="project-card" data-reveal aria-labelledby="card-2-title">
+              <div class="project-card__image" role="img" aria-label="portfolio website project preview">
+                <img src="assets/pp.png" alt="Portfolio" loading="lazy">
+              </div>
+              <div class="project-card__body">
+                <ul class="project-card__tags" role="list" aria-label="Tags">
+                  <li class="tag tag--accent">HTML/CSS</li>
+                  <li class="tag">JavaScript</li>
+                  <li class="tag">GSAP</li>
+                  <li class="tag">ScrollTrigger</li>
+                </ul>
+                <h3 class="project-card__title" id="card-1-title">Portfolio Website</h3>
+                <p class="project-card__description">
+                  A personal portfolio built with editorial design principles, GSAP scroll animations, and a custom design system.
+                </p>
+                <div class="project-card__links">
+                  <a class="project-card__link project-card__link--primary" href="https://github.com/Abhijeetraj01/Personal-Portfolio"
                     target="_blank" rel="noopener noreferrer" aria-label="View REST API Service on GitHub">
                     GitHub &#8599;
                   </a>
-                  <a class="project-card__link" href="#" aria-label="View REST API Service demo">
+                  <a class="project-card__link" href="https://abhijeetraj.netlify.app" aria-label="View REST API Service demo">
                     Demo &rarr;
                   </a>
                 </div>
@@ -430,7 +448,7 @@
           </li>
 
           <li>
-            <article class="project-card" data-reveal aria-labelledby="card-2-title">
+            <article class="project-card" data-reveal aria-labelledby="card-3-title">
               <div class="project-card__image" role="img" aria-label="Memory Allocator project preview">
                 <div class="project-card__image-placeholder" aria-hidden="true"></div>
                 <div class="project-card__overlay" aria-hidden="true">
@@ -458,7 +476,7 @@
           </li>
 
           <li>
-            <article class="project-card" data-reveal aria-labelledby="card-3-title">
+            <article class="project-card" data-reveal aria-labelledby="card-4-title">
               <div class="project-card__image" role="img" aria-label="Dev Tooling CLI project preview">
                 <div class="project-card__image-placeholder" aria-hidden="true"></div>
                 <div class="project-card__overlay" aria-hidden="true">
@@ -478,34 +496,6 @@
                 <div class="project-card__links">
                   <a class="project-card__link project-card__link--primary" href="https://github.com/abhijeetraj01"
                     target="_blank" rel="noopener noreferrer" aria-label="View Dev Tooling CLI on GitHub">
-                    GitHub &#8599;
-                  </a>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li>
-            <article class="project-card" data-reveal aria-labelledby="card-4-title">
-              <div class="project-card__image" role="img" aria-label="Data Structures Library project preview">
-                <div class="project-card__image-placeholder" aria-hidden="true"></div>
-                <div class="project-card__overlay" aria-hidden="true">
-                  <span class="project-card__overlay-text">View Project &rarr;</span>
-                </div>
-              </div>
-              <div class="project-card__body">
-                <ul class="project-card__tags" role="list" aria-label="Tags">
-                  <li class="tag tag--accent">Python</li>
-                  <li class="tag">Algorithms</li>
-                </ul>
-                <h3 class="project-card__title" id="card-4-title">Data Structures Library</h3>
-                <p class="project-card__description">
-                  Clean, documented implementations of classic data structures and algorithms. A personal reference and
-                  teaching resource.
-                </p>
-                <div class="project-card__links">
-                  <a class="project-card__link project-card__link--primary" href="https://github.com/abhijeetraj01"
-                    target="_blank" rel="noopener noreferrer" aria-label="View Data Structures Library on GitHub">
                     GitHub &#8599;
                   </a>
                 </div>
